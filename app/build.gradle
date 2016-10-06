@@ -1,11 +1,21 @@
-apply plugin: 'com.android.application'
+import com.android.build.gradle.internal.dsl.ProductFlavor
+
+apply plugin: $/com.android.application/$
 
 android {
     compileSdkVersion 24
-    buildToolsVersion "24.0.2"
+    buildToolsVersion "24.0.3"
+    final def config = defaultConfig {
+        applicationId "com.example.d.longayu"
+        minSdkVersion 13
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
     defaultConfig {
         applicationId "com.example.d.longayu"
-        minSdkVersion 10
+        minSdkVersion 13
         targetSdkVersion 24
         versionCode 1
         versionName "1.0"
@@ -26,4 +36,8 @@ dependencies {
     })
     compile 'com.android.support:appcompat-v7:24.2.1'
     testCompile 'junit:junit:4.12'
+    compile 'com.google.android.gms:play-services-appindexing:8.4.0'
+    compile 'com.android.support:support-annotations:24.2.1'
+    compile 'com.android.support:support-v13:24.2.1'
+    compile 'com.android.support:support-v4:24.2.1'
 }
