@@ -1,66 +1,91 @@
 package com.example.d.longayu;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
 
 import com.android.internal.util.Predicate;
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.appindexing.Thing;
 import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.vision.text.Text;
+
+import static com.example.d.longayu.DatabaseHelper.*;
 
 public class Signup extends AppCompatActivity {
+    public Button enterOTP;
 
-    public static final android.R.attr R =
+    public void otp() {
+        enterOTP = (Button) findViewById(R.id.button8);
+        enterOTP.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Signup.this,EnterOTP.class);
+                startActivity(intent);
+            }
+        });
+    }
+    //  public static final android.R.attr R =
+
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
      */
-    private GoogleApiClient client;
-
+    //  private GoogleApiClient client;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(android.R.attr.layout.activity_signup);
+        setContentView(R.layout.activity_signup);
+        otp();
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
-        client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
+        //    client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
     }
 
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
      */
-    public Action getIndexApiAction() {
-        Thing object = new Thing.Builder()
-                .setName("Signup Page") // TODO: Define a title for the content shown.
-                // TODO: Make sure this auto-generated URL is correct.
-                .setUrl(Uri.parse("http://[ENTER-YOUR-URL-HERE]"))
-                .build();
-        return new Action.Builder(Action.TYPE_VIEW)
-                .setObject(object)
-                .setActionStatus(Action.STATUS_TYPE_COMPLETED)
-                .build();
-    }
+    // public Action getIndexApiAction() {
+    //   Thing object = new Thing.Builder()
+    //         .setName("Signup Page") // TODO: Define a title for the content shown.
+    //       // TODO: Make sure this auto-generated URL is correct.
+    //     .setUrl(Uri.parse("http://[ENTER-YOUR-URL-HERE]"))
+    //   .build();
+    // return new Action.Builder(Action.TYPE_VIEW)
+    //       .setObject(object)
+    //     .setActionStatus(Action.STATUS_TYPE_COMPLETED)
+    //   .build();
+    // }
 
-    @Override
-    public void onStart() {
-        super.onStart();
+    // @Override
+    // public void onStart() {
+    //   super.onStart();
 
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
-        client.connect();
-        AppIndex.AppIndexApi.start(client, getIndexApiAction());
-    }
+    // ATTENTION: This was auto-generated to implement the App Indexing API.
+    // See https://g.co/AppIndexing/AndroidStudio for more information.
+    // client.connect();
+    //  AppIndex.AppIndexApi.start(client, getIndexApiAction());
+    // }
 
-    @Override
-    public void onStop() {
-        super.onStop();
+    //  @Override
+    //  public void onStop() {
+    //    super.onStop();
 
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
-        AppIndex.AppIndexApi.end(client, getIndexApiAction());
-        client.disconnect();
-    }
+    // ATTENTION: This was auto-generated to implement the App Indexing API.
+    // See https://g.co/AppIndexing/AndroidStudio for more information.
+    //  AppIndex.AppIndexApi.end(client, getIndexApiAction());
+    //  client.disconnect();
+    // }
+ //   public void enter_otp(View view) {
+   //     Intent otp = new Intent(Signup.this, EnterOTP.class);
+     //   startActivity(otp);
+  //  }
+
+    //}
 }

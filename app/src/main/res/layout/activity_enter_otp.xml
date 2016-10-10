@@ -24,7 +24,7 @@
         android:id="@+id/editText4"
         android:hint="@string/enter_otp"
         android:textColor="@android:color/black"
-        android:textAlignment="center" />
+        android:textAlignment="center"/>
 
     <TextView
         android:text="@string/resend_otp"

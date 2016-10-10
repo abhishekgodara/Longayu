@@ -1,4 +1,4 @@
-package com.example.d.longayu;
+ package com.example.d.longayu;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
@@ -41,6 +41,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
            db.execSQL("create table" +TABLE_NAME+ "(ID INTEGER PRIMARY KEY AUTOINCREMENT, Clinic_id TEXT, Clinic_doctor_id TEXT, Doctor_title TEXT)");
     }
+
+
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {

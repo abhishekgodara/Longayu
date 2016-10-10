@@ -1,7 +1,6 @@
 <resources>
     <string name="app_name">Longayu</string>
     <string name="phone_android_string_emptyphonenumber">phone @android:string/emptyPhoneNumber</string>
-    <string name="_91">+91 -</string>
     <string name="enter_otp">Enter OTP</string>
     <string name="resend_otp">Resend OTP</string>
     <string name="doctor">Doctor</string>
@@ -12,8 +11,13 @@
     <string name="hospital_administrator">hospital administrator</string>
     <string name="medical_assistant">medical assistant</string>
     <string name="nurse">nurse</string>
-    <string name="by_signing_up_i_agree_with">By signing up, i agree with</string>
     <string name="and">and</string>
+    <string name="title_activity_Consumer_home">Map</string>
+    <string name="google_maps_key">AIzaSyBvcBbVgGk3_1r6FG_wIvVoZbwcVlpzTgx</string>
+    <string name="_91">+91</string>
+    <string name="submit">Submit</string>
+    <string name="by_signing_up_i_agree_with">By signing up, i agree with</string>
     <string name="privacy_policy">privacy policy</string>
     <string name="terms_of_use">terms of use</string>
+
 </resources>
